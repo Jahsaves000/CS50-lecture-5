@@ -1,6 +1,6 @@
 # CS50-lecture-5
 
-coding begins at 49:00
+coding begins at 43:00
 list.c
 
 #include <stdio.h>
@@ -58,3 +58,50 @@ int main(void)
 //then print tmp
 
 
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+typedef struct
+{
+    char *name;
+    char *number;
+}
+person;
+
+const int TEN = 2;
+
+int main(void)
+{
+    //FILE *file = fopen("phonebook1.csv", "a");
+    //if (file == NULL)
+    //{
+     //   return 1;
+    //}
+    person people[TEN];
+    
+    people[0].name = get_string("What's your name?\n");
+    people[0].number = get_string("What's your number?\n");
+    
+    people[1].name = get_string("What's your name?\n");
+    people[1].number = get_string("What's your number?\n");
+    
+    
+    
+        
+    //fprintf(file, "%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n", people[0].name, people[0].number, people[1].name, people[1].number, people[2].name, people[2].number, people[3].name, people[3].number, people[4].name, people[4].number, people[5].name, people[5].number, people[6].name, people[6].number, people[7].name, people[7].number, people[8].name, people[8].number, people[9].name, people[9].number);
+    
+    //fclose(file);
+    
+    for (int i = 0; i < TEN; i++)
+    {
+        if(strcmp(people[1].name, "people[1].name") == 0)
+        {
+            printf("Found %s.\n", people[1].number);
+        }
+        else
+        {
+            printf("Not found.\n");
+        }
+    }
+}
