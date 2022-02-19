@@ -69,15 +69,15 @@ typedef struct
 }
 person;
 
-const int TEN = 2;
+const int TEN = 10;
 
 int main(void)
 {
-    //FILE *file = fopen("phonebook1.csv", "a");
-    //if (file == NULL)
-    //{
-     //   return 1;
-    //}
+    FILE *file = fopen("phonebook1.csv", "a");
+    if (file == NULL)
+    {
+       return 1;
+    }
     person people[TEN];
     
     people[0].name = get_string("What's your name?\n");
@@ -86,18 +86,40 @@ int main(void)
     people[1].name = get_string("What's your name?\n");
     people[1].number = get_string("What's your number?\n");
     
+    people[2].name = get_string("What's your name?\n");
+    people[2].number = get_string("What's your number?\n");
+    
+    people[3].name = get_string("What's your name?\n");
+    people[3].number = get_string("What's your number?\n");
+    
+    people[4].name = get_string("What's your name?\n");
+    people[4].number = get_string("What's your number?\n");
+    
+    people[5].name = get_string("What's your name?\n");
+    people[5].number = get_string("What's your number?\n");
+    
+    people[6].name = get_string("What's your name?\n");
+    people[6].number = get_string("What's your number?\n");
+    
+    people[7].name = get_string("What's your name?\n");
+    people[7].number = get_string("What's your number?\n");
+    
+    people[8].name = get_string("What's your name?\n");
+    people[8].number = get_string("What's your number?\n");
+    
+    people[9].name = get_string("What's your name?\n");
+    people[9].number = get_string("What's your number?\n");
     
     
-        
-    //fprintf(file, "%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n", people[0].name, people[0].number, people[1].name, people[1].number, people[2].name, people[2].number, people[3].name, people[3].number, people[4].name, people[4].number, people[5].name, people[5].number, people[6].name, people[6].number, people[7].name, people[7].number, people[8].name, people[8].number, people[9].name, people[9].number);
+    fprintf(file, "%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n", people[0].name, people[0].number, people[1].name, people[1].number, people[2].name, people[2].number, people[3].name, people[3].number, people[4].name, people[4].number, people[5].name, people[5].number, people[6].name, people[6].number, people[7].name, people[7].number, people[8].name, people[8].number, people[9].name, people[9].number);
     
-    //fclose(file);
+    fclose(file);
     
     for (int i = 0; i < TEN; i++)
     {
-        if(strcmp(people[1].name, "people[1].name") == 0)
+        if(strcmp(people[i].name, people[i].name) == 0)
         {
-            printf("Found %s.\n", people[1].number);
+            printf("Found %s %s.\n", people[i].name, people[i].number);
         }
         else
         {
